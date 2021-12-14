@@ -13,11 +13,12 @@
 
     gtag('config', 'G-F6KKRHDPTN');
   </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> 
   <script>
       $(document).ready(function () {
         $.ajax({
           type: "get",
-          url: "sample.xml"
+          url: "https://blog.tatsuya0902.net/feed/"
         }).done(function (result) {
           $(result).find("sample").each(function () {
             $(".XMLSampleRequest").append('<h3>' + $(this).find('title').text() + '</h3>' + '<p>' + $(this).find('link').text() + '</p>');
