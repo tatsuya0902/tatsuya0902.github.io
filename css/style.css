@@ -1,0 +1,22 @@
+body {
+    font-family: 'Noto Sans CJK JP', 'Noto Sans JP', 'Yu Gothic Medium', YuGothicMedium, MeiryoUI, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Hiragino Sans', arial, helvetica, sans-serif ;
+}
+#nav {
+  list-style: none;
+  overflow: hidden;
+}
+ #nav li {
+    width: auto;
+  text-align: center;
+  background-color: #000000;
+  height: 50px;
+  line-height: 50px;
+  margin-right: 2px;
+  float: left;
+}
+ #nav li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 20px;
+}
