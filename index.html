@@ -20,7 +20,7 @@
           type: "get",
           url: "https://blog.tatsuya0902.net/feed/"
         }).done(function (result) {
-          $(result).find("sample").each(function () {
+          $(result).find("item").each(function () {
             $(".XMLSampleRequest").append('<h3>' + $(this).find('title').text() + '</h3>' + '<p>' + $(this).find('link').text() + '</p>');
           });
           console.log(result);
