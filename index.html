@@ -21,7 +21,7 @@
           url: "https://blog.tatsuya0902.net/feed/"
         }).done(function (result) {
           $(result).find("item").each(function () {
-            $(".XMLSampleRequest").append('<h3>' + $(this).find('title').text() + '</h3>' + '<p>' + $(this).find('link').text() + '</p>');
+            $(".XMLSampleRequest").append('<a href="'+$(this).find('link').text()+'"><h3>' + $(this).find('title').text() + '</h3> </a>');
           });
           console.log(result);
         });
