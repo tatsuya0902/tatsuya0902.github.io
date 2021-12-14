@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <link rel="icon" href="assets/tatsuya0902.png" type="img/png">
   <link href="css/style.css" rel="stylesheet">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-F6KKRHDPTN"></script>
@@ -12,7 +13,19 @@
 
     gtag('config', 'G-F6KKRHDPTN');
   </script>
-  <link rel="icon" href="assets/tatsuya0902.png" type="img/png">
+  <script>
+      $(document).ready(function () {
+        $.ajax({
+          type: "get",
+          url: "sample.xml"
+        }).done(function (result) {
+          $(result).find("sample").each(function () {
+            $(".XMLSampleRequest").append('<h3>' + $(this).find('title').text() + '</h3>' + '<p>' + $(this).find('link').text() + '</p>');
+          });
+          console.log(result);
+        });
+  });
+  </script>
 </head>
 
 <body style="margin-top: 50px;
@@ -74,6 +87,24 @@ color: #226e93;">
       よろしくお願いします。
     </p>
   </div>
+  <div style=" border-style: solid;
+  border-right-color: #999999;
+  border-left-color: #999999; 
+  border-bottom-color: #999999;
+  border-top-width: 3px;
+  border-bottom-width: 2px ;
+  margin-top: 1px;
+  margin-bottom: 15px;
+  color: #226e93;">
+    <p style="text-align: center; font-size: 27px; margin-top: 8px; margin-bottom: 10px;">
+      <font color="#226e93">ブログ</font>
+    </p>
+  </div>
+  <article class="new">
+    <div class="XMLSampleRequest">
+
+    </div>
+  </article>
   <div style=" border-style: solid;
   border-right-style: hidden;
   border-left-style: hidden; 
