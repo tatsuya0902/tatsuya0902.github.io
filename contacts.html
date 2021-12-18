@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta charset="utf-8" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
@@ -20,24 +21,28 @@
 <body>
     <header>
         <nav class="red darken-2" role="navigation">
-            <div class="nav-wrapper container"><a id="logo-container" href="https://tatsuya0902.net"
-                    class="brand-logo">tatsuya0902</a>
+            <div class="nav-wrapper container"><a href="https://tatsuya0902.net" class="brand-logo">tatsuya0902</a>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+                    <script>
+                        $(document).ready(function () {
+                            $('.sidenav').sidenav();
+                        });
+                    </script><i class="material-icons">menu</i>
+                </a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="https://tatsuya0902.net" target="_blank">ホーム</a></li>
                     <li><a href="https://blog.tatsuya0902.net" target="_blank">ブログ</a></li>
                     <li><a href="https://tatsuya0902.net/contacts.html">連絡先</a></li>
                     <li><a href="https://status.tatsuya0902.net" target="_blank">サーバー稼働状況</a></li>
                 </ul>
-
                 <ul id="nav-mobile" class="sidenav">
                     <li><a href="https://tatsuya0902.net" target="_blank">ホーム</a></li>
                     <li><a href="https://blog.tatsuya0902.net" target="_blank">ブログ</a></li>
                     <li><a href="https://tatsuya0902.net/contacts.html">連絡先</a></li>
                     <li><a href="https://status.tatsuya0902.net" target="_blank">サーバー稼働状況</a></li>
                 </ul>
-                <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
         </nav>
-
     </header>
 
     <div class="section no-pad-bot" id="index-banner">
@@ -95,4 +100,13 @@ color: #226e93;">
                 <span>Copyright</span> <span>©</span> <span>2021</span> <span>tatsuya0902</span> <span>All</span>
                 <span>rights</span> <span>reserved.</span>
             </p>
+            <script type="text/javascript" src="js/materialize.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var elems = document.querySelectorAll('.sidenav');
+                    var instances = M.Sidenav.init(elems, options);
+                });
+            </script>
 </body>
+
+</html>
