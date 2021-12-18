@@ -2,53 +2,70 @@
 <html>
 
 <head>
-  <link rel="icon" href="assets/tatsuya0902.png" type="img/png">
-  <link href="css/style.css" rel="stylesheet">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F6KKRHDPTN"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
-    gtag('config', 'G-F6KKRHDPTN');
-  </script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script>
-    $(document).ready(function () {
-      $.ajax({
-        type: "get",
-        url: "https://blog.tatsuya0902.net/feed/"
-      }).done(function (result) {
-        $(result).find("item").each(function () {
-          $(".XMLSampleRequest").append('<a href="' + $(this).find('link').text() + '"><h3>' + $(this).find('title').text() + '</h3> </a>');
+  <head>
+    <link rel="icon" href="assets/tatsuya0902.png" type="img/png">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>tatsuya0902 - ホームページ</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F6KKRHDPTN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-F6KKRHDPTN');
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function () {
+        $.ajax({
+          type: "get",
+          url: "https://blog.tatsuya0902.net/feed/"
+        }).done(function (result) {
+          $(result).find("item").each(function () {
+            $(".XMLSampleRequest").append('<a href="' + $(this).find('link').text() + '"><p style="text-decoration: none; color: #000000;">' + $(this).find('title').text() + '</p> </a>');
+          });
+          console.log(result);
         });
-        console.log(result);
       });
-    });
-  </script>
-</head>
+    </script>
+  </head>
 
-<body style="margin-top: 50px;
-margin-left: 150px;
-margin-right: 150px;
-margin-bottom: 50px;">
+<body>
   <header>
-    <div style="font-size: 40px;">
-      <a class="no-underline" href="https://tatsuya0902.net">
-        tatsuya0902
-      </a>
-    </div>
+    <nav class="red darken-2" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="https://tatsuya0902.net"
+          class="brand-logo">tatsuya0902</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="https://tatsuya0902.net" target="_blank">ホーム</a></li>
+          <li><a href="https://blog.tatsuya0902.net" target="_blank">ブログ</a></li>
+          <li><a href="https://tatsuya0902.net/contacts.html">連絡先</a></li>
+          <li><a href="https://status.tatsuya0902.net" target="_blank">サーバー稼働状況</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="https://tatsuya0902.net" target="_blank">ホーム</a></li>
+          <li><a href="https://blog.tatsuya0902.net" target="_blank">ブログ</a></li>
+          <li><a href="https://tatsuya0902.net/contacts.html">連絡先</a></li>
+          <li><a href="https://status.tatsuya0902.net" target="_blank">サーバー稼働状況</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </nav>
   </header>
-  <ul id="nav">
-    <li><a href="https://tatsuya0902.net" target="_blank">ホーム</a></li>
-    <li><a href="https://blog.tatsuya0902.net" target="_blank">ブログ</a></li>
-    <li><a href="https://tatsuya0902.net/contacts.html">連絡先</a></li>
-    <li><a href="https://status.tatsuya0902.net" target="_blank">サーバー稼働状況</a></li>
-  </ul>
-  </p>
-  <div style=" border-style: solid;
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <div style=" border-style: solid;
 border-right-color: #999999;
 border-left-color: #999999; 
 border-bottom-color: #999999;
@@ -57,18 +74,18 @@ border-bottom-width: 2px ;
 margin-top: 10px;
 margin-bottom: opx;
 color: #226e93;">
-    <p style="text-align: center; font-size: 27px; margin-top: 8px; margin-bottom: 10px;">
-      <font color="#226e93">ようこそtatsuya0902へ</font>
-    </p>
-  </div>
-  <p style="text-align: center; font-size: 27px; margin-top: 10pt;">
-    <font color="#000000">
-      tatsuya0902は<br>
-      達也の活動を<br>
-      報告するサイトです
-    </font>
-  </p>
-  <div style=" border-style: solid;
+        <p style="text-align: center; font-size: 27px; margin-top: 8px; margin-bottom: 10px;">
+          <font color="#226e93"><span>ようこそ</span>tatsuya0902へ</font>
+        </p>
+      </div>
+      <p style="text-align: center; font-size: 27px; margin-top: 10pt;">
+        <font color="#000000">
+          tatsuya0902は<br>
+          達也の活動を<br>
+          報告するサイトです
+        </font>
+      </p>
+      <div style=" border-style: solid;
   border-right-color: #999999;
   border-left-color: #999999; 
   border-bottom-color: #999999;
@@ -77,19 +94,19 @@ color: #226e93;">
   margin-top: 1px;
   margin-bottom: 15px;
   color: #226e93;">
-    <p style="text-align: center; font-size: 27px; margin-top: 8px; margin-bottom: 10px;">
-      <font color="#226e93">こんにちわ!!</font>
-    </p>
-  </div>
-  <div style="display:flex; flex-direction: row;">
-    <img src="assets/tatsuya0902.png" width="124" height="124" alt="">
-    <p style="font-size: 20px;">
-      達也です。<br>
-      主にtwitterがメインで活動しています。<br>
-      よろしくお願いします。
-    </p>
-  </div>
-  <div style=" border-style: solid;
+        <p style="text-align: center; font-size: 27px; margin-top: 8px; margin-bottom: 10px;">
+          <font color="#226e93">こんにちわ!!</font>
+        </p>
+      </div>
+      <div style="display:flex; flex-direction: row;">
+        <img src="assets/tatsuya0902.png" width="124" height="124" alt="">
+        <p style="font-size: 20px;">
+          <span>達也です。</span><br>
+          <span>主に</span><span>twitterが</span><span>メインで</span><span>活動しています。</span><br>
+          よろしくお願いします。
+        </p>
+      </div>
+      <div style=" border-style: solid;
   border-right-color: #999999;
   border-left-color: #999999; 
   border-bottom-color: #999999;
@@ -98,32 +115,32 @@ color: #226e93;">
   margin-top: 1px;
   margin-bottom: 15px;
   color: #226e93;">
-    <p style="text-align: center; font-size: 27px; margin-top: 8px; margin-bottom: 10px;">
-      <font color="#226e93">ブログ新着投稿</font>
-    </p>
-  </div>
-  <article class="new">
-    <div class="XMLSampleRequest" style="text-align: center; font-size: 20px;">
+        <p style="text-align: center; font-size: 27px; margin-top: 8px; margin-bottom: 10px;">
+          <font color="#226e93">ブログ新着投稿</font>
+        </p>
+      </div>
+      <article class="new">
+        <div class="XMLSampleRequest" style="text-align: center; font-size: 20px;">
 
-    </div>
-  </article>
-  <div style=" border-style: solid;
+        </div>
+      </article>
+      <div style=" border-style: solid;
   border-right-style: hidden;
   border-left-style: hidden; 
   border-bottom-style: hidden;
   border-width: 1px;
   margin: 10px;
   color: #999999;">
-  </div>
-  <p style="text-align:center; font-size: 27px;">
-    <font color="#226e93">twitter</font>
-  </p>
-  <div style="text-align: center;">
-    <a class="twitter-timeline" data-lang="ja" data-width="310px" data-height="480px" data-dnt="true"
-      href="https://twitter.com/fuchiy0902?ref_src=twsrc%5Etfw">Tweets by fuchiy0902</a>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div>
-  <div style=" border-style: solid;
+      </div>
+      <p style="text-align:center; font-size: 27px;">
+        <font color="#226e93">twitter</font>
+      </p>
+      <div style="text-align: center;">
+        <a class="twitter-timeline" data-lang="ja" data-width="310px" data-height="480px" data-dnt="true"
+          href="https://twitter.com/fuchiy0902?ref_src=twsrc%5Etfw">Tweets by fuchiy0902</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+      <div style=" border-style: solid;
   border-right-style: hidden;
   border-left-style: hidden; 
   border-bottom-style: hidden;
@@ -131,18 +148,19 @@ color: #226e93;">
   margin-top: 20px;
   margin-bottom: 0px;
   color: #999999;">
-  </div>
-  <p style="text-align: center; font-size: 15px;">
-    <font color="#226e93">ページ情報</font><br>
-  </p>
-  <div style="text-align: center; margin-top:0px;">
-    <img
-      src="https://img.shields.io/github/commits-since/tatsuya0902/tatsuya0902.github.io/4a46ae2fdce203144d8a0bc3c5e4630efe0666d8?color=informational&label=commit&logo=github"><br>
-    <p style="margin-top: 0px;">
-      Github Repository:<a href="https://github.com/tatsuya0902/tatsuya0902.github.io/commits/main" target="_blank">here</a>
-    </p>
-  </div>
-  <div style=" border-style: solid;
+      </div>
+      <p style="text-align: center; font-size: 15px;">
+        <font color="#226e93">ページ情報</font><br>
+      </p>
+      <div style="text-align: center; margin-top:0px;">
+        <img
+          src="https://img.shields.io/github/commits-since/tatsuya0902/tatsuya0902.github.io/4a46ae2fdce203144d8a0bc3c5e4630efe0666d8?color=informational&label=commit&logo=github"><br>
+        <p style="margin-top: 0px;">
+          Github Repository:<a href="https://github.com/tatsuya0902/tatsuya0902.github.io/commits/main"
+            target="_blank">here</a>
+        </p>
+      </div>
+      <div style=" border-style: solid;
   border-right-style: hidden;
   border-left-style: hidden; 
   border-bottom-style: hidden;
@@ -150,10 +168,11 @@ color: #226e93;">
   margin-top: 0px;
   margin-bottom: 20px;
   color: #999999;">
-  </div>
-  <p style="text-align: center;">
-    Copyright © 2021 tatsuya0902 All rights reserved.
-  </p>
+      </div>
+      <p style="text-align: center;">
+        <span>Copyright</span> <span>©</span> <span>2021</span> <span>tatsuya0902</span> <span>All</span>
+        <span>rights</span> <span>reserved.
+      </p>
 </body>
 
 </html>
