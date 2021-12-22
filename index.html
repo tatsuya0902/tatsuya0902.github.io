@@ -29,7 +29,7 @@
         url: "https://blog.tatsuya0902.net/feed/"
       }).done(function (result) {
         $(result).find("item").each(function () {
-          $(".XMLSampleRequest").append('<a href="' + $(this).find('link').text() + '"><p style="text-decoration: none; color: #000000;">' + $(this).find('title').text() + '</p> </a>');
+          $(".XMLSampleRequest").append('<a href="' + $(this).find('link').text() + '" target="_blank" rel="noopener noreferrer"><p style="text-decoration: none; color: #000000;">' + $(this).find('title').text() + '</p> </a>');
         });
         console.log(result);
       });
@@ -49,16 +49,16 @@
           </script><i class="material-icons">menu</i>
         </a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="https://tatsuya0902.net" target="_blank">ホーム</a></li>
+          <li><a href="https://tatsuya0902.net" target="_blank" rel="noopener noreferrer">ホーム</a></li>
           <li><a href="https://tatsuya0902.net/contacts.html">連絡先</a></li>
-          <li><a href="https://blog.tatsuya0902.net" target="_blank">ブログ</a></li>
-          <li><a href="https://status.tatsuya0902.net" target="_blank">サーバー稼働状況</a></li>
+          <li><a href="https://blog.tatsuya0902.net" target="_blank" rel="noopener noreferrer">ブログ</a></li>
+          <li><a href="https://status.tatsuya0902.net" target="_blank" rel="noopener noreferrer">サーバー稼働状況</a></li>
         </ul>
         <ul id="nav-mobile" class="sidenav">
-          <li><a href="https://tatsuya0902.net" target="_blank">ホーム</a></li>
+          <li><a href="https://tatsuya0902.net" target="_blank" rel="noopener noreferrer">ホーム</a></li>
           <li><a href="https://tatsuya0902.net/contacts.html">連絡先</a></li>
-          <li><a href="https://blog.tatsuya0902.net" target="_blank">ブログ</a></li>
-          <li><a href="https://status.tatsuya0902.net" target="_blank">サーバー稼働状況</a></li>
+          <li><a href="https://blog.tatsuya0902.net" target="_blank" rel="noopener noreferrer">ブログ</a></li>
+          <li><a href="https://status.tatsuya0902.net" target="_blank" rel="noopener noreferrer">サーバー稼働状況</a></li>
         </ul>
       </div>
     </nav>
@@ -159,7 +159,7 @@ color: #86cecb;">
           src="https://img.shields.io/github/commits-since/tatsuya0902/tatsuya0902.github.io/4a46ae2fdce203144d8a0bc3c5e4630efe0666d8?color=informational&label=commit&logo=github"><br>
         <p style="margin-top: 0px;">
           Github Repository:<a href="https://github.com/tatsuya0902/tatsuya0902.github.io/commits/main"
-            target="_blank">here</a>
+          target="_blank" rel="noopener noreferrer">here</a>
         </p>
       </div>
       <div style=" border-style: solid;
