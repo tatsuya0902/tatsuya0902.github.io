@@ -47,3 +47,8 @@ a.buttons {
 .buttons:not(:first-of-type) {
   margin-top: 20px;
 }
+
+a {
+  text-decoration: underline;
+  text-decoration-color: #86cecb;
+}
