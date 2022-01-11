@@ -49,8 +49,6 @@ a {
   text-decoration-color: #86cecb;
 }
 
-.header {
-  position:sticky ;
-  top: 0;
-  left: 0;
+.sidenav-overlay {
+  z-index: 10;
 }
