@@ -48,3 +48,9 @@ a {
   text-decoration: underline;
   text-decoration-color: #86cecb;
 }
+
+.header {
+  position:sticky ;
+  top: 0;
+  left: 0;
+}
